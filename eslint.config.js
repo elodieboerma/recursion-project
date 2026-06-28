@@ -3,7 +3,7 @@ import pluginJest from "eslint-plugin-jest";
 export default [
   {
     // update this to match your test files
-    files: ["src/*.js", "src/*-spec.js"],
+    files: ["src/merge-sort.js", "src/merge-sort.spec.js"],
     plugins: { jest: pluginJest },
     languageOptions: {
       globals: pluginJest.environments.globals.globals,

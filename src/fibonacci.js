@@ -26,22 +26,25 @@ console.log(fibs(1));
 console.log(fibs(9));
 
 
-
 function fibsRec(n) {
-    console.log("This was printed recursively.");
 
-    let arr = [0,1];
-    let num0 = 0;
-    let num1 = 1;
+    let arr = [];
     let curNum;
 
-    if (n === 0) {
-        
-        return;
+    if (n < 2) {
+        arr.push(n);
+        return arr;
     }
 
     curNum = (fibsRec(n - 1) + fibsRec(n - 2));
-    console.log(curNum);
+    curNum.split('');
+    for (let i = 0; i < curNum.length; i++) {
+        let finalCurNum = 0;
+        Number(curNum[i]);
+        finalCurNum += curNum[i];
+        arr.push(finalCurNum);
+    }
+
     arr.push(curNum);
     return arr;
 }

@@ -27,28 +27,14 @@ console.log(fibs(9));
 
 
 function fibsRec(n) {
-
-    let arr = [];
-    let curNum;
-
     if (n === 0) return [0];
     if (n === 1) return [0, 1];
+
     const arr = fibsRec(n - 1);
-    const next = arr[arr.length - 1] + arr[arr.length - 2];
-    arr.push(next);
-    return arr;
-
-
-    curNum = (fibsRec(n - 1) + fibsRec(n - 2));
-    curNum.split('');
-    for (let i = 0; i < curNum.length; i++) {
-        let finalCurNum = 0;
-        Number(curNum[i]);
-        finalCurNum += curNum[i];
-        arr.push(finalCurNum);
-    }
-
-    arr.push(curNum);
+    console.log(arr);
+    const nextNum = arr[arr.length - 1] + arr[arr.length - 2];
+    console.log(nextNum);
+    arr.push(nextNum);
     return arr;
 }
 

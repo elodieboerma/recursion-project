@@ -31,10 +31,13 @@ function fibsRec(n) {
     let arr = [];
     let curNum;
 
-    if (n < 2) {
-        arr.push(n);
-        return arr;
-    }
+    if (n === 0) return [0];
+    if (n === 1) return [0, 1];
+    const arr = fibsRec(n - 1);
+    const next = arr[arr.length - 1] + arr[arr.length - 2];
+    arr.push(next);
+    return arr;
+
 
     curNum = (fibsRec(n - 1) + fibsRec(n - 2));
     curNum.split('');

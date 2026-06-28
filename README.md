@@ -1,5 +1,6 @@
-Packages to install (listed in order of commands): HTML plugin, CSS loaders
+This project is for helping me practice using recursive functions.
 
+Packages to install (listed in order of commands): HTML plugin, CSS loaders:
     npm install --save-dev html-webpack-plugin
     --save-dev style-loader css-loader
 
